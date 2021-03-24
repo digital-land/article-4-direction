@@ -122,10 +122,6 @@
             </dt>
             <dd class="govuk-summary-list__value">                article-4-direction:park-hall-road            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">name
-            </dt>
-            <dd class="govuk-summary-list__value">                Park Hall Road            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">reference
             </dt>
             <dd class="govuk-summary-list__value">                CA19            </dd>
@@ -140,25 +136,58 @@
             </dt>
             <dd class="govuk-summary-list__value">                <a class="govuk-link" href="https://www.lambeth.gov.uk/sites/default/files/CA19ParkHallRoadArticle4DirectionGuidanceNote1985.pdf">https://www.lambeth.gov.uk/sites/default/files/CA19ParkHallRoadArticle4DirectionGuidanceNote1985.pdf</a>            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">entry-date
+            <dt class="govuk-summary-list__key">name
             </dt>
-            <dd class="govuk-summary-list__value">                2021-01-04            </dd>
+            <dd class="govuk-summary-list__value">                Park Hall Road            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">start-date
             </dt>
             <dd class="govuk-summary-list__value">                1985-02-18            </dd>
         </div>        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">end-date
+            <dt class="govuk-summary-list__key">entry-date
             </dt>
-            <dd class="govuk-summary-list__value">                            </dd>
+            <dd class="govuk-summary-list__value">                2021-01-04            </dd>
         </div>    
-    </dl>    <footer class="govuk-!-font-size-16 data-record__resource">From resource <a href="https://github.com/digital-land/article-4-direction-collection/tree/main/transformed/article-4-direction/223b31dab8f2af16bd637db4be4e17239a7405a5f585200610c05cd64440c988.csv" class="govuk-link">223b31dab8f2af16b...</a></footer>
-</article>
+    </dl></article>
 </div>
             
 </div>
 
-        </main>
+<a href="https://digital-land.github.io/specification/schema/geography/">View the schema for geography</a>
+
+<h2 class="govuk-heading-m govuk-!-margin-top-9">History</h2>
+<div class="data-table__wrapper" data-module="data-table">
+<div class="data-table-left-shadow with-transition"></div>
+<div class="wide-table">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>entry-date</th>
+                <th>resource</th>
+                <th>line</th>
+                <th>name</th>
+                <th>reference</th>
+                <th>organisation</th>
+                <th>documentation-url</th>
+                <th>start-date</th>
+                <th>geography</th>
+            </tr>
+        </thead>
+        <tbody>            <tr>
+                <td>2021-01-04</td>
+                <td><a href="https://github.com/digital-land/article-4-direction-collection/tree/main/transformed/article-4-direction/223b31dab8f2af16bd637db4be4e17239a7405a5f585200610c05cd64440c988.csv#L9">223b31dab8f2...</a></td>
+                <td>8</td>
+                    <td>Park Hall Road</td> 
+                    <td>CA19</td> 
+                    <td>local-authority-eng:LBH</td> 
+                    <td>https://www.lambeth.gov.uk/sites/default/files/CA19ParkHallRoadArticle4DirectionGuidanceNote1985.pdf</td> 
+                    <td>1985-02-18</td> 
+                    <td>article-4-direction:park-hall-road</td> 
+            </tr>        </tbody>
+    </table>
+</div>
+<div class="data-table-right-shadow visible with-transition"></div>
+</div>        </main>
       </div>
 
     <div class="dlf-feedback__wrapper">
@@ -251,6 +280,13 @@
 <script>
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const mapComponent = new DLMaps.Map($mapElement).init({})
+</script>
+<script>
+    // Initialise back to top
+    var $data_tables = document.querySelectorAll('[data-module*="data-table"]')
+    $data_tables.forEach(data_table => {
+        new window.DLFrontend.ScrollableTables(data_table).init()
+    })
 </script>
   </body>
 </html>
