@@ -140,10 +140,6 @@
 <div class="govuk-grid-row">    <div class="govuk-grid-column-two-thirds"><article class="data-record govuk-!-margin-bottom-6">
     <h4 class="govuk-heading-s data-record__identifier">#/article-4-direction/local-authority-eng/SWK/article-4-direction-old-southern-railways-and-the-</h4>
     <dl class="govuk-summary-list data-record__properties">            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">geography
-            </dt>
-            <dd class="govuk-summary-list__value">                article-4-direction:old-southern-railways-and-the-            </dd>
-        </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">organisation
             </dt>
             <dd class="govuk-summary-list__value"><a href="https://digital-land.github.io/organisation/local-authority-eng/SWK" class="govuk-link">London Borough of Southwark</a>
@@ -153,6 +149,10 @@
             <dt class="govuk-summary-list__key">name
             </dt>
             <dd class="govuk-summary-list__value">                Old Southern Railways and the Forage            </dd>
+        </div>        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">geography
+            </dt>
+            <dd class="govuk-summary-list__value">                article-4-direction:old-southern-railways-and-the-            </dd>
         </div>        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">entry-date
             </dt>
@@ -182,8 +182,8 @@
             <th>resource</th>
             <th>line</th>
             <th>name</th>
-            <th>geography</th>
             <th>organisation</th>
+            <th>geography</th>
         </tr>
     </thead>
     <tbody>        <tr>
@@ -191,8 +191,8 @@
             <td><a href="https://github.com/digital-land/article-4-direction-collection/tree/main/transformed/article-4-direction/223b31dab8f2af16bd637db4be4e17239a7405a5f585200610c05cd64440c988.csv#L19">223b31dab8f2...</a></td>
             <td>18</td>
                 <td>Old Southern Railways and the Forage</td> 
-                <td>article-4-direction:old-southern-railways-and-the-</td> 
                 <td>local-authority-eng:SWK</td> 
+                <td>article-4-direction:old-southern-railways-and-the-</td> 
         </tr>    </tbody>
 </table>
 
@@ -302,7 +302,7 @@
     const $mapElement = document.querySelector('[data-module="boundary-map"]')
     const $nationalMapLink = document.querySelector('.dl-link-national-map')
     const mapComponent = new DLMaps.Map($mapElement).init({
-        initGeoJsonLoadCallback: function (urls, featureGroup) {
+        initZoomCallback: function (featureGroup) {
             console.log("initial load completed")
             // do we need to check there isn't more than one shape?
             const center = featureGroup.getBounds().getCenter()
